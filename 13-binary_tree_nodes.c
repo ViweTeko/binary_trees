@@ -22,3 +22,18 @@ size_t tree_size(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 	return (tree_size(tree->left) + tree_size(tree->right) + 1);
+}
+
+/**
+ * tree_leaves - leaves of tree
+ * @tree: tree
+ * Return: num of leaves r NULL
+ */
+size_t tree_leaves(const binary_tree_t *tree)
+{
+	if (!tree)
+		return (0);
+	if (!tree->left && !tree->right)
+		return (1);
+	return (tree_leaves(tree->left) + tree_leaves(tree->right));
+}
