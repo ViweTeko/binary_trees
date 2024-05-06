@@ -14,7 +14,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 
 /**
  * tree_sibling - finds sibling node
- * @tree: tree
+ * @node: node
  * Return: sibling or NULL
  */
 binary_tree_t *tree_sibling(binary_tree_t *node)

@@ -1,12 +1,12 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_ancestor - finds lowest common ancestor
+ * binary_trees_ancestor - finds lowest common ancestor
  * @first: first node
  * @second: second node
  * Return: ancestor node or NULL
  */
-binary_tree_t *binary_tree_ancestor(const binary_tree_t *first,
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 					binary_tree_t *second)
 {
 	size_t one, two;
