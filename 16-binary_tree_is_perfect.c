@@ -5,7 +5,7 @@
  * @tree: root node of tree
  * Return: 1 if perfect, 0 if not (or NULL)
  */
-int binary_tree_is_perfect(const bnary_tree_t *tree)
+int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t hi = 0, node = 0, pow = 0;
 
