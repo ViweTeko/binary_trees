@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_trees_is_perfect - checks if tree is perfect
+ * binary_tree_is_perfect - checks if tree is perfect
  * @tree: root node of tree
  * Return: 1 if perfect, 0 if not (or NULL)
  */
@@ -32,8 +32,8 @@ size_t tree_height(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	hl = tree->left ? tree_height(tree->left) : 0;
-	hr = tree->right ? tree_height(tree->right) : 0;
+	hl = tree->left ? 1 + tree_height(tree->left) : 0;
+	hr = tree->right ? 1 + tree_height(tree->right) : 0;
 
 	return (hl > hr ? hl : hr);
 }
@@ -58,10 +58,10 @@ size_t tree_size(const binary_tree_t *tree)
  */
 int pow_rec(int x, int y)
 {
+	if (y < 0)
+		return (-1);
 	if (y == 0)
 		return (1);
 	else
 		return (x * pow_rec(x, y - 1));
-	if (y < 0)
-		return (-1);
 }
